@@ -11,7 +11,7 @@ jobs:
     # for our self-hosted runner, use one of the labels we defined in that runner
     runs-on: self-hosted-m1mac-hetzner
     steps:
-      # Cheks ou your repository under $GITHUB_WORKSPASE, so your job can access it
+      # Cheks ou your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
       # Runs a single command in the runner shell
