@@ -1,9 +1,9 @@
 name: Hello world test
 on:
   push:
-    branches: none
+    branches: [ main ]
   pull_request:
-    branches: none
+    branches: [ main ]
 jobs:
   # An arbitrary job called 'build'
   build:
