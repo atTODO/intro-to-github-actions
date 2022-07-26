@@ -1,10 +1,11 @@
 name: Hello world test
 on:
+  # workflow_dispatch allows you to manually run the job from the actions section in github
   workflow_dispatch:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 jobs:
   # An arbitrary job called 'build'
   build:
@@ -16,5 +17,8 @@ jobs:
       - uses: actions/checkout@v3
       
       # Runs a single command in the runner shell
-      - name: Run a one-line script
-        run: echo Hello, world!  
+      - name: Run a multi-line script
+        run: |
+          echo Hello, world!
+          sleep 15
+          echo Goodbye!
